@@ -1,1 +1,102 @@
-ECHO is on.
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header, footer {
+    background-color: #0e83f0;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#controls {
+    text-align: center;
+    margin: 1em 0;
+}
+
+#controls button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+#instructions {
+    margin-top: 0.5em;
+    font-size: 1em;
+}
+
+#bingo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Bingo cell */
+.bingo-cell {
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    background-color: #f0f0f0;
+  }
+  
+  .bingo-cell.marked {
+    background-color: #90ee90; /* Light green */
+  }
+  
+  .bingo-cell.winning-cell {
+    background-color: gold;
+    color: white;
+  }
+
+.grid-cell {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.grid-cell:hover {
+    background-color: #f0f0f0;
+}
+
+.grid-cell.marked {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+    #bingo-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid-cell {
+        padding: 0.8em;
+        font-size: 0.9em;
+    }
+}
+
+#message-container {
+    text-align: center;
+    font-size: 2em;
+    color: green;
+    margin-top: 20px;
+}
+
