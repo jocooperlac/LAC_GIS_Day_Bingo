@@ -50,7 +50,7 @@ header, footer {
     cursor: pointer;
     user-select: none;
     background-color: #ffffff;
-    color: #091a33
+    color: white
   }
   
   .bingo-cell.marked {
