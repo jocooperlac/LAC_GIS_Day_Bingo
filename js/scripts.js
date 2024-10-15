@@ -1,11 +1,11 @@
 // script.js
 
 const wordlist = [
-    'Agoura Hills', 'Alhambra', 'Arcadia', 'Artesia', 'Avalon', 'Azusa',
-  'Baldwin Park', 'Bell', 'Bellflower', 'Bell Gardens', 'Beverly Hills',
-  'Bradbury', 'Burbank', 'Calabasas', 'Carson', 'Cerritos', 'Claremont',
-  'Commerce', 'Compton', 'Covina', 'Cudahy', 'Culver City', 'Diamond Bar',
-  'Downey', 'Duarte', 'El Monte', 'El Segundo', 'Gardena', 'Glendale', 'Glendora',
+    'projection', 'ESRI', 'layer', 'metadata', 'attributes', 
+    'geodatabase', 'Buffer', 'Raster', 'Vector', 'Geo-reference', 
+    'Demographics', 'Remote-sensing', 'EGIS', 'Vertex', 'Union', 
+    'Legend', 'Centroid', 'City of Los Angeles', 'City of Calabasas', 
+    'Latitude', 'Longitude', 'Pixel', 'Annotations', 'DEM', 'Parcel', 
   ];
   
   // Function to shuffle the word list
@@ -121,7 +121,7 @@ const wordlist = [
   // Function to display bingo message
   function displayBingoMessage() {
     const messageContainer = document.getElementById('message-container');
-    messageContainer.textContent = 'Bingo! You won!';
+    messageContainer.textContent = 'Bingo! You won! Please bring it up to be verified and claim your prize!';
     messageContainer.classList.add('bingo-message');
   }
   
