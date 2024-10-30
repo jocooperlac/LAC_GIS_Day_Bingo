@@ -1,11 +1,12 @@
 // script.js
 
 const wordlist = [
-    'projection', 'ESRI', 'layer', 'metadata', 'attributes', 
-    'geodatabase', 'Buffer', 'Raster', 'Vector', 'Geo-reference', 
+    'Projection', 'ESRI', 'Layer', 'Metadata', 'Attributes', 
+    'Geodatabase', 'Buffer', 'Raster', 'Vector', 'Geo-reference', 
     'Demographics', 'Remote-sensing', 'EGIS', 'Vertex', 'Union', 
-    'Legend', 'Centroid', 'City of Los Angeles', 'City of Calabasas', 
+    'Legend', 'Centroid',  
     'Latitude', 'Longitude', 'Pixel', 'Annotations', 'DEM', 'Parcel', 
+     'AGOL', 'ArcGIS Pro', 
   ];
   
   // Function to shuffle the word list
