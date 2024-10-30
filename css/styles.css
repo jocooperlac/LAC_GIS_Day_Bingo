@@ -18,6 +18,7 @@ body {
     text-align: center;
 }
 
+/* Header and Footer Styling */
 header, footer {
     background-color: #091a33;
     color: white;
@@ -33,14 +34,20 @@ header, footer {
     margin: 1em 0;
 }
 
-/* Button styling within controls */
+/* Container for Buttons */
+#button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 0.5em;
+}
+
+/* Styling for Buttons */
 #controls button {
     padding: 0.5em 1em;
     font-size: 1em;
-    margin: 0.5em; /* Ensure spacing between buttons */
 }
 
-/* Instructions text styling */
+/* Instructions styling */
 #instructions {
     margin-top: 0.5em;
     font-size: 1em;
