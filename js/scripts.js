@@ -1,7 +1,7 @@
 const wordlist = [
-    'Projection', 'ESRI', 'Layer', 'Metadata', 'Attributes', 
+    'Projection', 'Esri', 'Layer', 'Metadata', 'Attributes', 
     'Geodatabase', 'Buffer', 'Raster', 'Vector', 'Geo-reference', 
-    'Demographics', 'Remote-sensing', 'EGIS', 'Vertex', 'Union', 
+    'Demographics', 'Remote-sensing', 'eGIS', 'Vertex', 'Union', 
     'Legend', 'Centroid',  
     'Latitude', 'Longitude', 'Pixel', 'Annotations', 'DEM', 'Parcel', 
     'AGOL', 'ArcGIS Pro', 
@@ -126,7 +126,7 @@ function checkForBingo() {
 // Function to display bingo message
 function displayBingoMessage() {
     const messageContainer = document.getElementById('message-container');
-    messageContainer.textContent = 'Bingo! You won! Please bring it up to be verified and claim your prize!';
+    messageContainer.textContent = 'Bingo! You may have won! Please bring it up to be verified and claim your prize!';
     messageContainer.classList.add('bingo-message');
 }
 
