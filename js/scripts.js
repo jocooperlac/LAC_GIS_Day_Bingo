@@ -70,6 +70,9 @@ function handleCellClick(event) {
         markedHistory = markedHistory.filter(i => i !== index); // Remove from history
     }
 
+    console.log('Marked cells:', markedCells);
+    console.log('Marked history:', markedHistory);
+
     // Check for bingo
     checkForBingo();
 }
@@ -146,13 +149,20 @@ function disableAllCells() {
 
 // Function to undo the last marked cell
 function undoLastMark() {
-    if (markedHistory.length === 0) return; // No action if nothing to undo
+    if (markedHistory.length === 0) {
+        console.log("No marked cells to undo.");
+        return; // No action if nothing to undo
+    }
 
     const lastMarkedIndex = markedHistory.pop(); // Get the last marked cell
     const cell = document.querySelector(`.bingo-cell[data-index='${lastMarkedIndex}']`);
     
     cell.classList.remove('marked'); // Unmark the cell visually
     markedCells = markedCells.filter(i => i !== lastMarkedIndex); // Update markedCells array
+
+    console.log('Undo action: Last marked cell removed:', lastMarkedIndex);
+    console.log('Marked cells after undo:', markedCells);
+    console.log('Marked history after undo:', markedHistory);
 }
 
 // Initialize the game
