@@ -27,6 +27,7 @@ header, footer {
     width: 100%;
 }
 
+/* Controls Section */
 #controls {
     display: flex;
     flex-direction: column;
@@ -54,28 +55,32 @@ header, footer {
     color: #ffffff;
 }
 
-/* Bingo Grid */
+/* Bingo Grid Container */
 #bingo-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(60px, 1fr)); /* Dynamic width */
     gap: 5px;
-    max-width: 500px;
+    max-width: 100%;
     margin: 20px auto;
     padding: 10px;
+    justify-content: center;
 }
 
 /* Bingo cell */
 .bingo-cell {
-    padding: 20px;
+    aspect-ratio: 1 / 1; /* Maintain square cells */
+    width: 100%; /* Full width of grid cell */
     border: 1px solid #4c4c4c;
     text-align: center;
     cursor: pointer;
     user-select: none;
     background-color: #ffffff;
     color: #091a33;
-    font-size: 1.2em;
+    font-size: calc(0.8em + 1vw); /* Responsive font size */
     transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bingo-cell:hover {
@@ -100,14 +105,14 @@ header, footer {
     margin-top: 20px;
 }
 
-/* Media Query for Responsiveness */
+/* Media Query for Small Devices */
 @media (max-width: 600px) {
     #bingo-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, minmax(50px, 1fr));
+        gap: 3px;
     }
 
     .bingo-cell {
-        padding: 15px;
-        font-size: 1em;
+        font-size: calc(0.7em + 1vw);
     }
 }
