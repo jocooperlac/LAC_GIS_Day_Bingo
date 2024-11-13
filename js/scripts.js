@@ -1,7 +1,7 @@
 const wordlist = [
     'Projection', 'Esri', 'Layer', 'Metadata', 'Attributes', 
-    'Geodatabase', 'Buffer', 'Raster', 'Vector', 'Geo-reference', 
-    'Demographics', 'Remote-sensing', 'eGIS', 'Vertex', 'Union', 
+    'Geo database', 'Buffer', 'Raster', 'Vector', 'Geo- reference', 
+    'Demographics', 'Remote- sensing', 'eGIS', 'Vertex', 'Union', 
     'Legend', 'Centroid',  
     'Latitude', 'Longitude', 'Pixel', 'Annotations', 'DEM', 'Parcel', 
     'AGOL', 'ArcGIS Pro', 
