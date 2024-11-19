@@ -2,9 +2,9 @@ const wordlist = [
     'Projection', 'Esri', 'Layer', 'Metadata', 'Attributes', 
     'Geo database', 'Buffer', 'Raster', 'Vector', 'Geo- reference', 
     'Demographics', 'Remote- sensing', 'eGIS', 'Vertex', 'Union', 
-    'Legend', 'Centroid',  
+    'Legend', 'Centroid',  'QGIS', 'Topology', 
     'Latitude', 'Longitude', 'Pixel', 'Annotations', 'DEM', 'Parcel', 
-    'AGOL', 'ArcGIS Pro', 
+    'AGOL', 'ArcGIS Pro', 'Cartography', 'Symbology', 
 ];
 
 // Function to shuffle the word list
