@@ -58,7 +58,7 @@ header, footer {
 /* Bingo Grid Container */
 #bingo-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(60px, 1fr)); /* Dynamic width */
+    grid-template-columns: repeat(5, minmax(50px, 1fr)); /* Dynamic width */
     gap: 5px;
     max-width: 100%;
     margin: 20px auto;
@@ -108,7 +108,7 @@ header, footer {
 /* Media Query for Small Devices */
 @media (max-width: 600px) {
     #bingo-grid {
-        grid-template-columns: repeat(5, minmax(50px, 1fr));
+        grid-template-columns: repeat(5, minmax(45px, 1fr));
         gap: 3px;
     }
 
