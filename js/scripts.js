@@ -159,10 +159,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const undoButton = document.getElementById('undo-button');
-    undoButton.addEventListener('click', undoLastMark);
+    if (undoButton) {
+        undoButton.addEventListener('click', undoLastMark);
+    } else {
+        console.error("Undo button not found in the DOM.");
+    }
 
     const switchGameButton = document.getElementById('switch-game');
-    switchGameButton.addEventListener('click', switchGameBoard);
+    if (switchGameButton) {
+        switchGameButton.addEventListener('click', switchGameBoard);
+    } else {
+        console.error("Switch Game button not found in the DOM.");
+    }
 
     generateBingoWords();
     createBingoGrid();
