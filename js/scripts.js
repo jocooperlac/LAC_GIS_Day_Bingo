@@ -123,15 +123,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function undoLastMark() {
-        if (markedHistory.length === 0) return;
-
-        const lastMarkedIndex = markedHistory.pop();
-        const cell = document.querySelector(`.bingo-cell[data-index='${lastMarkedIndex}']`);
-        cell.classList.remove('marked');
-        markedCells = markedCells.filter(i => i !== lastMarkedIndex);
-
-        checkForBingo();
+    if (markedHistory.length === 0) {
+        console.log("No marked cells to undo.");
+        return; // No action if nothing to undo
     }
+
+    // Remove the last marked cell
+    const lastMarkedIndex = markedHistory.pop();
+    const cell = document.querySelector(`.bingo-cell[data-index='${lastMarkedIndex}']`);
+    if (cell) {
+        cell.classList.remove('marked'); // Unmark the cell visually
+    }
+    markedCells = markedCells.filter(i => i !== lastMarkedIndex); // Update the markedCells array
+
+    console.log('Undo action: Last marked cell removed:', lastMarkedIndex);
+    console.log('Marked cells after undo:', markedCells);
+    console.log('Marked history after undo:', markedHistory);
+
+    // Re-check for bingo
+    const hasWinningCombination = winningCombinations.some(combination =>
+        combination.every(index => markedCells.includes(index))
+    );
+
+    if (!hasWinningCombination) {
+        // If no bingo, remove all winning highlights
+        document.querySelectorAll('.bingo-cell.winning-cell').forEach(cell => {
+            cell.classList.remove('winning-cell');
+        });
+
+        // Clear the bingo message
+        const messageContainer = document.getElementById('message-container');
+        messageContainer.textContent = '';
+        messageContainer.classList.remove('bingo-message');
+    }
+}
 
     function switchGameBoard() {
         const currentKey = currentWordList === wordlist1 ? 'wordlist1' : 'wordlist2';
