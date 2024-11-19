@@ -170,20 +170,8 @@ generateBingoWords();
 createBingoGrid();
 addCellEventListeners();
 
-// Update the reset button to be the "Undo" button
-const undoButton = document.getElementById('reset-button');
-undoButton.textContent = 'Undo';
-undoButton.removeEventListener('click', resetGame); // Remove reset functionality
-undoButton.addEventListener('click', undoLastMark); // Add undo functionality
-
-// Add event listener to the new game button to restart the game
+// Update the New Game button to be the "Undo" button
 const newGameButton = document.getElementById('new-game');
-newGameButton.addEventListener('click', () => {
-    const messageContainer = document.getElementById('message-container');
-    messageContainer.textContent = ''; // Clear any bingo message
-    messageContainer.classList.remove('bingo-message');
-    
-    generateBingoWords(); // Generate new words
-    createBingoGrid(); // Create a new grid
-    addCellEventListeners(); // Re-add event listeners
-});
+newGameButton.textContent = 'Undo Last Pick';
+newGameButton.removeEventListener('click', () => {}); // Remove existing functionality
+newGameButton.addEventListener('click', undoLastMark); // Add undo functionality
